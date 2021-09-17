@@ -1,0 +1,66 @@
+body {
+    background-color: #141414;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+    body{
+        margin: 0;
+    }
+    nav {
+        height: 5vh;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(20,20,20,0.8155637254901961) 100%);
+    }
+    .homeSection{
+       height: 90vh; 
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    h1{
+        color: white;
+        font-weight: lighter;
+        font-size: 30px;
+        line-height: 1rem;
+    }
+    .selectUserProfileContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        line-height: 0.8rem;
+    }
+    .userProfileContainer {
+        height: 110px;
+        width: 90px;
+        margin: 5px 5px 20px;
+    }
+    .portrait{
+        background-color: lightgrey;
+        height: 90px;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .profileName{
+        color: #7B7B7B;
+        font-size: 12px;
+        font-weight: 100;
+        text-align: center;
+        line-height: .5rem;
+    }
+    .homeManageProfiles{
+        border-radius: 0px;
+        border: solid .15em #7B7B7B;
+        color: #7B7B7B;
+        background-color: transparent;
+        width: 220px;
+        padding: 7px;
+        margin-top: 30px;
+        letter-spacing: 2px;
+        font-size: 13px;
+    }
+}
