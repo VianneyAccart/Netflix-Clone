@@ -1,18 +1,27 @@
 body {
     background-color: #141414;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+.darker{
+    opacity: 0.4;
 }
 
-@media screen and (max-width: 480px) {
-    body{
-        margin: 0;
-    }
+@media screen and (max-width: 840px) {
+
     nav {
         height: 5vh;
         background: rgb(0,0,0);
         background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(20,20,20,0.8155637254901961) 100%);
+        display: flex;
+        padding: 10px;
+        box-sizing: border-box;
     }
+
     .homeSection{
        height: 90vh; 
        display: flex;
@@ -22,7 +31,7 @@ body {
     }
     h1{
         color: white;
-        font-weight: lighter;
+        font-weight: 300;
         font-size: 30px;
         line-height: 1rem;
     }
@@ -40,9 +49,13 @@ body {
         margin: 5px 5px 20px;
     }
     .portrait{
-        background-color: lightgrey;
         height: 90px;
         width: 100%;
+        border-radius: 5px;
+    }
+    .newUserImage, .userImage{
+        max-width: 100%;
+        height: auto;
         border-radius: 5px;
     }
     .profileName{
@@ -58,9 +71,146 @@ body {
         color: #7B7B7B;
         background-color: transparent;
         width: 220px;
-        padding: 7px;
         margin-top: 30px;
         letter-spacing: 2px;
         font-size: 13px;
+        display: flex;
+    }
+    .activeManageProfiles{
+        border-radius: 0px;
+        color: #141414;
+        border: solid .1em whitesmoke;
+        background-color: whitesmoke;
+        width: 114px;
+        margin-top: 30px;
+        letter-spacing: 2px;
+        font-size: 13px;
+        font-weight: 500;
+        display: flex;
+    }
+    .activeManageProfiles:hover{
+        color: whitesmoke;
+        background-color: #CC0100;
+        border: solid .1em #CC0100;
+    }
+    .homeManageProfiles:hover{
+        color: whitesmoke;
+        border: solid .1em white;
+    }
+    .textButtonManageProfiles{
+        padding: 4px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 841px) {
+
+    nav {
+        height: 10vh;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(20,20,20,0.8155637254901961) 100%);
+        display: flex;
+    }
+    .logoNetflix {
+        max-width: 93px;
+        max-height: 32px;
+        margin: 18px 0 0 55px;
+    }
+    .homeSection{
+       height: 80vh; 
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    h1{
+        color: white;
+        font-weight: 300;
+        font-size: 3.5vw;
+        line-height: 1rem;
+    }
+    .selectUserProfileContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        line-height: 0.8rem;
+        margin-top: 18px;
+    }
+    .userProfileContainer {
+        height: 10vw;
+        max-height: 200px;
+        max-width: 200px;
+        min-height: 84px;
+        min-width: 84px;
+        padding: 0 15px;
+        width: 10vw;
+    }
+    .portrait{
+        height: 10vw;
+        max-height: 200px;
+        max-width: 200px;
+        min-height: 84px;
+        min-width: 84px;
+        width: 10vw;
+        cursor: pointer;
+    }
+    .portrait:hover{
+        border: solid 4px white;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+    .newUserImage, .userImage{
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .profileName{
+        color: #7B7B7B;
+        font-size: 1.3vw;
+        font-weight: 100;
+        text-align: center;
+        line-height: .5rem;
+    }
+    .homeManageProfiles{
+        border-radius: 0px;
+        border: solid .1em #7B7B7B;
+        color: #7B7B7B;
+        background-color: transparent;
+        width: 260px;
+        margin-top: 100px;
+        letter-spacing: 2px;
+        font-size: 17px;
+        font-weight: 300;
+        display: flex;
+        cursor: pointer;
+    }
+    .homeManageProfiles:hover{
+        color: whitesmoke;
+        border: solid .1em white;
+    }
+    .activeManageProfiles{
+        border-radius: 0px;
+        border: solid .1em whitesmoke;
+        color: #141414;
+        background-color: whitesmoke;
+        width: 150px;
+        margin-top: 100px;
+        letter-spacing: 2px;
+        font-size: 17px;
+        font-weight: 800;
+        display: flex;
+        cursor: pointer;
+    }
+    .activeManageProfiles:hover{
+        color: whitesmoke;
+        background-color: #CC0100;
+        border: solid .1em #CC0100;
+    }
+    .textButtonManageProfiles{
+        padding: 8px;
+        margin: auto;
     }
 }
