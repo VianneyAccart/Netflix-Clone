@@ -1,59 +1,65 @@
-// Permet l'ajout d'un nouvel utilisateur
-    /* A AJOUTER
-        - Homme ou Femme et la photo s'adapte en conséquence
-        - Le profil s'ajoute avant "Ajouter un profil"
-        - Vérification du nombre maximum de profils autorisés (5)
-        - Plusiers ajouts possibles sans casser la structure de la page
-    */
-function newUser() {
+/* A ajouter
+    - Homme ou Femme et la photo s'adapte en conséquence
+*/
 
-// Cible le container des profils
-const newUserContainer = document.querySelector(".selectUserProfileContainer");
+let usersNumber = document.querySelectorAll(".userProfileContainer").length-1; // -1 => Exclut le bloc d'ajout
 
-// Demander à l'utilisateur d'entrer un nom et le stocker dans une variable myName
-let myName = prompt("Prénom de l'utilisateur");
+function newUser() { // Ajout d'un nouvel utilisateur
 
-if (myName.length !== 0) { // On vérifie que le nom ne soit pas vide
-    // 1 - Créer une nouvelle div
-    const newUserProfileContainer = document.createElement("div");
+    // Cible le container des profils
+    const newUserContainer = document.querySelector(".selectUserProfileContainer");
+
+    let myName = prompt("Prénom de l'utilisateur");
+
+    if (myName.length !== 0) { // On vérifie que le prompt ne soit pas vide
+
+        usersNumber+=1; // Incrémente le nombre d'utilisateurs
+
+        // 1 - Créer une nouvelle div
+        const newUserProfileContainer = document.createElement("div");
         // Lui assigner la classe userProfileContainer
         newUserProfileContainer.classList.add("userProfileContainer");
-            // Lui assigner un ID
-            newUserProfileContainer.id = "lastNewUserProfileContainer";
-                // L'ajouter au DOM
-                newUserContainer.appendChild(newUserProfileContainer);
+        // Lui assigner un ID
+        newUserProfileContainer.id = `NewUserProfileContainer${usersNumber}`;
+        // L'ajouter au DOM 
+        newUserContainer.insertBefore(newUserProfileContainer, document.querySelector("#newUser"));
 
-    // 2 - Créer une nouvelle div
-    const newPortrait = document.createElement("div");
+        // 2 - Créer une nouvelle div
+        const newPortrait = document.createElement("div");
         // Lui assigner la classe portrait
         newPortrait.classList.add("portrait");
-            // Lui assigner un ID
-            newPortrait.id = "lastNewPortrait";
-                // L'ajouter au DOM
-                document.getElementById("lastNewUserProfileContainer").appendChild(newPortrait);
+        // Lui assigner un ID
+        newPortrait.id = `NewPortrait${usersNumber}`;
+        // L'ajouter au DOM
+        document.getElementById(`NewUserProfileContainer${usersNumber}`).appendChild(newPortrait);
 
-    // 3 - Créer une nouvelle image de profil
-    const newUserImage = document.createElement("img");
+        // 3 - Créer une nouvelle image de profil
+        const newUserImage = document.createElement("img");
         // Lui assigner la classe userImage
         newUserImage.classList.add("userImage");
-            // Lui assigner un ID
-            newUserImage.id = "lastNewUserImage";
-                // Ajouter une image automatiquement
-                newUserImage.src = "assets/img/new_user_added.png";
-                    // L'ajouter au DOM
-                    document.getElementById("lastNewPortrait").appendChild(newUserImage);
+        // Lui assigner un ID
+        newUserImage.id = `NewUserImage${usersNumber}`;
+        // Ajouter une image automatiquement
+        newUserImage.src = "assets/img/new_user_added.png";
+        // L'ajouter au DOM
+        document.getElementById(`NewPortrait${usersNumber}`).appendChild(newUserImage);
 
-    // 4 - Créer un nouveau h2
-    const newProfileName = document.createElement("h2");
+        // 4 - Créer un nouveau h2
+        const newProfileName = document.createElement("h2");
         // Lui assigner la classe profileName
         newProfileName.classList.add("profileName");
-            // Utiliser un innerHTML pour afficher le nom
-            newProfileName.innerHTML = myName;
-                // L'ajouter au DOM
-                document.getElementById("lastNewUserProfileContainer").appendChild(newProfileName)
+        // Utiliser un innerHTML pour afficher le nom
+        newProfileName.innerHTML = myName;
+        // L'ajouter au DOM
+        document.getElementById(`NewUserProfileContainer${usersNumber}`).appendChild(newProfileName);
     }
 }
 
-
-
-document.querySelector(".newUserImage").addEventListener("click", newUser);
+document.querySelector(".newUserImage").addEventListener("click", function() {
+    // On ne peut pas avoir plus de 4 profils (+ le bloc d'ajout)
+    if (usersNumber >= 4) {
+        alert("Vous ne pouvez pas avoir plus de 4 profils");
+    } else {
+        newUser();
+    }
+});
