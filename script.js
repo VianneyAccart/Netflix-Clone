@@ -1,13 +1,9 @@
-/* A ajouter
-    - Homme ou Femme et la photo s'adapte en conséquence
-*/
-
-let usersNumber = document.querySelectorAll(".userProfileContainer").length-1; // -1 => Exclut le bloc d'ajout
+let usersNumber = document.querySelectorAll(".user-profile").length-1; // -1 => Exclut le bloc d'ajout
 
 function newUser() { // Ajout d'un nouvel utilisateur
 
     // Cible le container des profils
-    const newUserContainer = document.querySelector(".selectUserProfileContainer");
+    const userProfileContainer = document.querySelector(".user-profile-container");
 
     let myName = prompt("Prénom de l'utilisateur");
 
@@ -15,47 +11,47 @@ function newUser() { // Ajout d'un nouvel utilisateur
 
         usersNumber+=1; // Incrémente le nombre d'utilisateurs
 
-        // 1 - Créer une nouvelle div
-        const newUserProfileContainer = document.createElement("div");
+        // 1 - Créer un nouveau user-profile
+        const userProfile = document.createElement("div");
         // Lui assigner la classe userProfileContainer
-        newUserProfileContainer.classList.add("userProfileContainer");
+        userProfile.classList.add("user-profile");
         // Lui assigner un ID
-        newUserProfileContainer.id = `NewUserProfileContainer${usersNumber}`;
+        userProfile.id = `user-profile-${usersNumber}`; 
         // L'ajouter au DOM 
-        newUserContainer.insertBefore(newUserProfileContainer, document.querySelector("#newUser"));
+        userProfileContainer.insertBefore(userProfile, document.querySelector("#add-user"));
 
-        // 2 - Créer une nouvelle div
-        const newPortrait = document.createElement("div");
+        // 2 - Créer un nouveau user portrait
+        const userPortrait = document.createElement("div");
         // Lui assigner la classe portrait
-        newPortrait.classList.add("portrait");
+        userPortrait.classList.add("user-portrait");
         // Lui assigner un ID
-        newPortrait.id = `NewPortrait${usersNumber}`;
+        userPortrait.id = `user-portrait-${usersNumber}`;
         // L'ajouter au DOM
-        document.getElementById(`NewUserProfileContainer${usersNumber}`).appendChild(newPortrait);
+        document.getElementById(`user-profile-${usersNumber}`).appendChild(userPortrait);
 
-        // 3 - Créer une nouvelle image de profil
-        const newUserImage = document.createElement("img");
+        // 3 - Créer un nouveau user-portrait__image
+        const userPortraitImage = document.createElement("img");
         // Lui assigner la classe userImage
-        newUserImage.classList.add("userImage");
+        userPortraitImage.classList.add("user-portrait__image");
         // Lui assigner un ID
-        newUserImage.id = `NewUserImage${usersNumber}`;
+        userPortraitImage.id = `user-portrait-image-${usersNumber}`;
         // Ajouter une image automatiquement
-        newUserImage.src = "assets/img/new_user_added.png";
+        userPortraitImage.src = "assets/img/new_user_added.png";
         // L'ajouter au DOM
-        document.getElementById(`NewPortrait${usersNumber}`).appendChild(newUserImage);
+        document.getElementById(`user-portrait-${usersNumber}`).appendChild(userPortraitImage);
 
-        // 4 - Créer un nouveau h2
-        const newProfileName = document.createElement("h2");
+        // 4 - Créer un nouveau user-name
+        const userName = document.createElement("h2");
         // Lui assigner la classe profileName
-        newProfileName.classList.add("profileName");
+        userName.classList.add("user-name");
         // Utiliser un innerHTML pour afficher le nom
-        newProfileName.innerHTML = myName;
+        userName.innerHTML = myName;
         // L'ajouter au DOM
-        document.getElementById(`NewUserProfileContainer${usersNumber}`).appendChild(newProfileName);
+        document.getElementById(`user-portrait-${usersNumber}`).appendChild(userName);
     }
 }
 
-document.querySelector(".newUserImage").addEventListener("click", function() {
+document.querySelector("#add-user").addEventListener("click", function() {
     // On ne peut pas avoir plus de 4 profils (+ le bloc d'ajout)
     if (usersNumber >= 4) {
         alert("Vous ne pouvez pas avoir plus de 4 profils");

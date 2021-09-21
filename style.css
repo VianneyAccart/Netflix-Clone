@@ -7,9 +7,6 @@ body {
 a {
     text-decoration: none;
 }
-.darker{
-    opacity: 0.4;
-}
 
 @media screen and (max-width: 840px) {
 
@@ -22,7 +19,7 @@ a {
         box-sizing: border-box;
     }
 
-    .homeSection{
+    .main{
        height: 90vh; 
        display: flex;
        flex-direction: column;
@@ -35,7 +32,7 @@ a {
         font-size: 30px;
         line-height: 1rem;
     }
-    .selectUserProfileContainer{
+    .user-profile-container{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -43,29 +40,32 @@ a {
         box-sizing: border-box;
         line-height: 0.8rem;
     }
-    .userProfileContainer {
+    .user-profile {
         height: 110px;
         width: 90px;
         margin: 5px 5px 20px;
     }
-    .portrait{
+    .user-portrait{
         height: 90px;
         width: 100%;
         border-radius: 5px;
     }
-    .newUserImage, .userImage{
+    .user-portrait--darker{
+        opacity: 0.4;
+    }
+    .user-portrait__image{
         max-width: 100%;
         height: auto;
         border-radius: 5px;
     }
-    .profileName{
+    .user-name{
         color: #7B7B7B;
         font-size: 12px;
         font-weight: 100;
         text-align: center;
         line-height: .5rem;
     }
-    .homeManageProfiles{
+    .user-manage-btn{
         border-radius: 0px;
         border: solid .15em #7B7B7B;
         color: #7B7B7B;
@@ -76,7 +76,7 @@ a {
         font-size: 13px;
         display: flex;
     }
-    .activeManageProfiles{
+    .user-manage-btn--active{
         border-radius: 0px;
         color: #141414;
         border: solid .1em whitesmoke;
@@ -88,16 +88,16 @@ a {
         font-weight: 500;
         display: flex;
     }
-    .activeManageProfiles:hover{
+    .user-manage-btn--active:hover{
         color: whitesmoke;
         background-color: #CC0100;
         border: solid .1em #CC0100;
     }
-    .homeManageProfiles:hover{
+    .user-manage-btn:hover{
         color: whitesmoke;
         border: solid .1em white;
     }
-    .textButtonManageProfiles{
+    .user-manage-btn__text{
         padding: 4px;
         margin: auto;
     }
@@ -111,12 +111,12 @@ a {
         background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(20,20,20,0.8155637254901961) 100%);
         display: flex;
     }
-    .logoNetflix {
+    .header__logo {
         max-width: 93px;
         max-height: 32px;
         margin: 18px 0 0 55px;
     }
-    .homeSection{
+    .main{
        height: 80vh; 
        display: flex;
        flex-direction: column;
@@ -129,7 +129,7 @@ a {
         font-size: 3.5vw;
         line-height: 1rem;
     }
-    .selectUserProfileContainer{
+    .user-profile-container{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -138,7 +138,7 @@ a {
         line-height: 0.8rem;
         margin-top: 18px;
     }
-    .userProfileContainer {
+    .user-profile {
         height: 10vw;
         max-height: 200px;
         max-width: 200px;
@@ -147,7 +147,7 @@ a {
         padding: 0 15px;
         width: 10vw;
     }
-    .portrait{
+    .user-portrait{
         height: 10vw;
         max-height: 200px;
         max-width: 200px;
@@ -156,25 +156,28 @@ a {
         width: 10vw;
         cursor: pointer;
     }
-    .portrait:hover{
+    .user-portrait--darker{
+        opacity: 0.4;
+    }
+    .user-portrait:hover{
         border: solid 4px white;
         box-sizing: border-box;
         border-radius: 8px;
     }
-    .newUserImage, .userImage{
+    .user-portrait__image{
         max-width: 100%;
         height: auto;
         border-radius: 5px;
     }
 
-    .profileName{
+    .user-name{
         color: #7B7B7B;
         font-size: 1.3vw;
         font-weight: 100;
         text-align: center;
         line-height: .5rem;
     }
-    .homeManageProfiles{
+    .user-manage-btn{
         border-radius: 0px;
         border: solid .1em #7B7B7B;
         color: #7B7B7B;
@@ -187,11 +190,11 @@ a {
         display: flex;
         cursor: pointer;
     }
-    .homeManageProfiles:hover{
+    .user-manage-btn:hover{
         color: whitesmoke;
         border: solid .1em white;
     }
-    .activeManageProfiles{
+    .user-manage-btn--active{
         border-radius: 0px;
         border: solid .1em whitesmoke;
         color: #141414;
@@ -204,12 +207,12 @@ a {
         display: flex;
         cursor: pointer;
     }
-    .activeManageProfiles:hover{
+    .user-manage-btn--active:hover{
         color: whitesmoke;
         background-color: #CC0100;
         border: solid .1em #CC0100;
     }
-    .textButtonManageProfiles{
+    .user-manage-btn__text{
         padding: 8px;
         margin: auto;
     }
