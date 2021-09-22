@@ -1,0 +1,105 @@
+body {
+    background-color: #141414;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+h1{
+    color: white;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1rem;
+}
+a {
+    text-decoration: none;
+}
+
+nav {
+    height: 5vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(20,20,20,0.8155637254901961) 100%);
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.header__logo {
+    max-width: 50px;
+    max-height: 18px;
+    margin: 3px 0 0 5px;
+}
+.main{
+    height: 90vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.user-profile-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+.user-profile {
+    height: 110px;
+    width: 90px;
+    margin: 5px 5px 20px;
+}
+.user-portrait{
+    height: 90px;
+    width: 100%;
+    border-radius: 5px;
+}
+.user-portrait--darker{
+    opacity: 0.4;
+}
+.user-portrait__image{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.user-name{
+    color: #7B7B7B;
+    font-size: 12px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 5px;
+}
+.user-manage-btn{
+    border-radius: 0px;
+    border: solid .15em #7B7B7B;
+    color: #7B7B7B;
+    background-color: transparent;
+    width: 220px;
+    margin-top: 30px;
+    letter-spacing: 2px;
+    font-size: 13px;
+    display: flex;
+}
+.user-manage-btn--active{
+    border-radius: 0px;
+    color: #141414;
+    border: solid .1em whitesmoke;
+    background-color: whitesmoke;
+    width: 114px;
+    margin-top: 30px;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+}
+.user-manage-btn--active:hover{
+    color: whitesmoke;
+    background-color: #CC0100;
+    border: solid .1em #CC0100;
+}
+.user-manage-btn:hover{
+    color: whitesmoke;
+    border: solid .1em white;
+}
+.user-manage-btn__text{
+    padding: 4px;
+    margin: auto;
+}

@@ -1,0 +1,117 @@
+body {
+    background-color: #141414;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+h1{
+    color: white;
+    font-weight: 300;
+    font-size: 3.5vw;
+    line-height: 1rem;
+    margin: .67em 0;
+}
+a {
+    text-decoration: none;
+}
+nav {
+    height: 10vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(20,20,20,0.8155637254901961) 100%);
+    display: flex;
+}
+.header__logo {
+    max-width: 93px;
+    max-height: 32px;
+    margin: 18px 0 0 55px;
+}
+.main{
+   height: 80vh; 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.user-profile-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 2em 0;
+}
+.user-profile {
+    height: 10vw;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 84px;
+    min-width: 84px;
+    width: 10vw;
+    margin: 0 2vw 0 0;
+}
+.user-portrait{
+    height: 10vw;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 84px;
+    min-width: 84px;
+    width: 10vw;
+    cursor: pointer;
+}
+.user-portrait--darker{
+    opacity: 0.4;
+}
+.user-portrait:hover{
+    border: solid 4px white;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.user-portrait__image{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.user-name{
+    color: #7B7B7B;
+    font-size: 1.3vw;
+    font-weight: 100;
+    text-align: center;
+    line-height: .5rem;
+    margin: .6em O;
+}
+.user-manage-btn{
+    display: block;
+    margin: 3em 0 1em 0;
+    font-size: 1.2vw;
+    border: 1px solid grey;
+    color: grey;
+    padding: .5em 1.5em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.user-manage-btn:hover{
+    color: whitesmoke;
+    border: solid 1px white;
+}
+.user-manage-btn--active{
+    border: solid .1em whitesmoke;
+    color: #141414;
+    background-color: whitesmoke;
+    display: block;
+    margin: 3em 0 1em 0;
+    font-size: 1.2vw;
+    border: 1px solid grey;
+    padding: .5em 1.5em;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.user-manage-btn--active:hover{
+    color: whitesmoke;
+    background-color: #CC0100;
+    border: solid 1px #CC0100;
+}
+.user-manage-btn__text{
+    margin: auto;
+}
